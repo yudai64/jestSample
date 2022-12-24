@@ -2,6 +2,8 @@ import { NameApiService } from "./nameApiService";
 import { DatabaseMock } from "./util";
 
 export const sumOfArray = (numbers: number[]): number => {
+  // 空配列が渡された場合は0を返却
+  if (numbers.length === 0) return 0;
   return numbers.reduce((a: number, b: number): number => a + b);
 };
 

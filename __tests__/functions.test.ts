@@ -16,8 +16,12 @@ describe("sumOfArray", () => {
     expect(sumOfArray([1, 2, 3])).toBe(6);
   });
 
-  test("pass [], it throws error", () => {
-    expect(() => sumOfArray([])).toThrow(TypeError);
+  // test("pass [], it throws error", () => {
+  //   expect(() => sumOfArray([])).toThrow(TypeError);
+  // });
+
+  test("pass [], it returns 0", () => {
+    expect(sumOfArray([])).toBe(0);
   });
 });
 
@@ -32,8 +36,13 @@ describe("asyncSumOfArray", () => {
     expect(data).toBe(6);
   });
 
-  test("pass [], it throws error", async () => {
-    await expect(() => asyncSumOfArray([])).rejects.toThrow(TypeError);
+  // test("pass [], it throws error", async () => {
+  //   await expect(() => asyncSumOfArray([])).rejects.toThrow(TypeError);
+  // });
+
+  test("pass [], it returns 0", async () => {
+    const data = await asyncSumOfArray([]);
+    expect(data).toBe(0);
   });
 });
 
